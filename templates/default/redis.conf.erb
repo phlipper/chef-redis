@@ -118,7 +118,7 @@ dir <%= node["redis"]["dir"] %>
 # different interval, or to listen to another port, and so on.
 #
 # slaveof <masterip> <masterport>
-<% unless node["redis"]["slaveof"].empty? %>
+<% unless node["redis"].fetch("slaveof", "").empty? %>
 slaveof <%= node["redis"]["slaveof"] %>
 <% end %>
 
@@ -128,7 +128,7 @@ slaveof <%= node["redis"]["slaveof"] %>
 # refuse the slave request.
 #
 # masterauth <master-password>
-<% unless node["redis"]["masterauth"].empty? %>
+<% unless node["redis"].fetch("masterauth", "").empty? %>
 masterauth <%= node["redis"]["masterauth"] %>
 <% end %>
 
@@ -174,7 +174,7 @@ repl-timeout <%= node["redis"]["repl_timeout"] %>
 # use a very strong password otherwise it will be very easy to break.
 #
 # requirepass foobared
-<% unless node["redis"]["requirepass"].empty? %>
+<% unless node["redis"].fetch("requirepass", "").empty? %>
 requirepass <%= node["redis"]["requirepass"] %>
 <% end %>
 

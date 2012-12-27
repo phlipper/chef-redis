@@ -11,3 +11,5 @@ recipe "redis::doc", "Installs redis documentation"
 %w{ ubuntu debian }.each do |os|
   supports os
 end
+
+depends "apt"

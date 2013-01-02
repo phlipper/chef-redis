@@ -48,14 +48,18 @@ default["redis"]["snapshots"]                   = {
   300 => 10,
   60  => 10000
 }
+default["redis"]["stop_writes_on_bgsave_error"] = "yes"
 default["redis"]["rdbcompression"]              = "yes"
+default["redis"]["rdbchecksum"]                 = "yes"
 default["redis"]["dbfilename"]                  = "dump.rdb"
 default["redis"]["dir"]                         = "/var/lib/redis"
 default["redis"]["slaveof"]                     = ""
 default["redis"]["masterauth"]                  = ""
 default["redis"]["slave_serve_stale_data"]      = "yes"
+default["redis"]["slave_read_only"]             = "yes"
 default["redis"]["repl_ping_slave_period"]      = 10
 default["redis"]["repl_timeout"]                = 60
+default["redis"]["slave_priority"]              = 100
 default["redis"]["requirepass"]                 = ""
 default["redis"]["rename_commands"]             = []
 default["redis"]["maxclients"]                  = 128
@@ -68,6 +72,7 @@ default["redis"]["appendfsync"]                 = "everysec"
 default["redis"]["no_appendfsync_on_rewrite"]   = "no"
 default["redis"]["auto_aof_rewrite_percentage"] = 100
 default["redis"]["auto_aof_rewrite_min_size"]   = "64mb"
+default["redis"]["lua_time_limit"]              = 5000
 default["redis"]["slowlog_log_slower_than"]     = 10000
 default["redis"]["slowlog_max_len"]             = 1024
 default["redis"]["vm_enabled"]                  = "no"
@@ -84,6 +89,11 @@ default["redis"]["set_max_intset_entries"]      = 512
 default["redis"]["zset_max_ziplist_entries"]    = 128
 default["redis"]["zset_max_ziplist_value"]      = 64
 default["redis"]["activerehashing"]             = "yes"
+default["redis"]["client_output_buffer_limit"]  = {
+  "normal" => "0 0 0",
+  "slave"  => "256mb 64mb 60",
+  "pubsub" => "32mb 8mb 60"
+}
 default["redis"]["include_config_files"]        = []
 ```
 

@@ -11,7 +11,6 @@ when "debian"
     components ["all"]
     key "http://www.dotdeb.org/dotdeb.gpg"
     action :add
-    notifies :run, "execute[apt-get update]", :immediately
   end
 when "ubuntu"
   apt_repository "chris-lea-redis-server" do
@@ -21,6 +20,5 @@ when "ubuntu"
     keyserver "keyserver.ubuntu.com"
     key "C7917B12"
     action :add
-    notifies :run, "execute[apt-get update]", :immediately
   end
 end

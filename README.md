@@ -1,4 +1,4 @@
-# chef-redis
+# chef-redis [![Build Status](https://travis-ci.org/phlipper/chef-redis.png?branch=master)](https://travis-ci.org/phlipper/chef-redis)
 
 ## Description
 

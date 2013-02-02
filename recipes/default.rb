@@ -3,8 +3,8 @@
 # Recipe:: default
 #
 
-case node["lsb"]["id"]
-when "Debian"
+case node["platform"]
+when "debian"
   apt_repository "dotdeb" do
     uri "http://packages.dotdeb.org"
     distribution node["lsb"]["codename"]
@@ -13,7 +13,7 @@ when "Debian"
     action :add
     notifies :run, "execute[apt-get update]", :immediately
   end
-when "Ubuntu"
+when "ubuntu"
   apt_repository "chris-lea-redis-server" do
     uri "http://ppa.launchpad.net/chris-lea/redis-server/ubuntu"
     distribution node["lsb"]["codename"]

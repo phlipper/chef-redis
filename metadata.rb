@@ -1,3 +1,4 @@
+name              "redis"
 maintainer        "Phil Cohen"
 maintainer_email  "github@phlippers.net"
 license           "MIT"

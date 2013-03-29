@@ -97,6 +97,14 @@ default["redis"]["include_config_files"]        = []
 None
 
 
+## Contributors
+
+Many thanks go to the following [contributors](https://github.com/phlipper/chef-redis/graphs/contributors) who have helped to make this cookbook even better:
+
+* [@smoil](https://github.com/smoil)
+  * `redis.conf` updates for Redis 2.6
+
+
 ## Contributing
 
 This cookbook could have way more personality... Help make it so!

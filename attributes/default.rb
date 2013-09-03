@@ -57,3 +57,4 @@ default["redis"]["client_output_buffer_limit"]  = {
   "pubsub" => "32mb 8mb 60"
 }
 default["redis"]["include_config_files"]        = []
+default["redis"]["ulimit"]                      = ""

@@ -20,3 +20,12 @@ template "/etc/redis/redis.conf" do
   action :create
   notifies :restart, "service[redis-server]"
 end
+
+template "/etc/default/redis-server" do
+  source "default_redis-server.erb"
+  owner  "root"
+  group  "root"
+  mode   "0644"
+  action :create
+  notifies :restart, "service[redis-server]"
+end

@@ -89,12 +89,13 @@ default["redis"]["client_output_buffer_limit"]  = {
   "pubsub" => "32mb 8mb 60"
 }
 default["redis"]["include_config_files"]        = []
+default["redis"]["ulimit"]                      = ""
 ```
 
 
 ## Basic Settings
 
-None
+* `node["redis"]["ulimit"]` - Sets the maximum number of file descriptors for the Redis process. If this is unset or empty, the limit is the system default. The default may not be high enough to handle a large number of concurrent connections. See [Redis Clients Handling](http://redis.io/topics/clients).
 
 
 ## Contributors

@@ -104,6 +104,8 @@ Many thanks go to the following [contributors](https://github.com/phlipper/chef-
 
 * [@smoil](https://github.com/smoil)
   * `redis.conf` updates for Redis 2.6
+* [@svend](https://github.com/svend)
+  * add attribute to set ulimit
 
 
 ## Contributing

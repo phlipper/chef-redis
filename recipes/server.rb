@@ -7,6 +7,15 @@ include_recipe "redis::default"
 
 package "redis-server"
 
+directory node[:redis][:dir] do
+  owner "redis"
+  group "redis"
+  mode "0750"
+  action :create
+  recursive true
+end
+
+
 service "redis-server" do
   supports :restart => true
   action [ :enable, :start ]

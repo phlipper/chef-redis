@@ -10,7 +10,6 @@ when "debian"
     distribution node["lsb"]["codename"]
     components ["all"]
     key "http://www.dotdeb.org/dotdeb.gpg"
-    action :add
   end
 when "ubuntu"
   apt_repository "chris-lea-redis-server" do
@@ -19,6 +18,5 @@ when "ubuntu"
     components ["main"]
     keyserver "keyserver.ubuntu.com"
     key "C7917B12"
-    action :add
   end
 end

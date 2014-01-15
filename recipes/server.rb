@@ -7,18 +7,17 @@ include_recipe "redis::default"
 
 package "redis-server"
 
-directory node[:redis][:dir] do
+directory node["redis"]["dir"] do
   owner "redis"
   group "redis"
   mode "0750"
-  action :create
   recursive true
 end
 
 
 service "redis-server" do
-  supports :restart => true
-  action [ :enable, :start ]
+  supports restart: true
+  action [:enable, :start]
 end
 
 template "/etc/redis/redis.conf" do
@@ -26,7 +25,6 @@ template "/etc/redis/redis.conf" do
   owner  "root"
   group  "root"
   mode   "0644"
-  action :create
   notifies :restart, "service[redis-server]"
 end
 
@@ -35,6 +33,5 @@ template "/etc/default/redis-server" do
   owner  "root"
   group  "root"
   mode   "0644"
-  action :create
   notifies :restart, "service[redis-server]"
 end

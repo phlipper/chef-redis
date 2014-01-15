@@ -106,6 +106,8 @@ Many thanks go to the following [contributors](https://github.com/phlipper/chef-
   * `redis.conf` updates for Redis 2.6
 * [@svend](https://github.com/svend)
   * add attribute to set ulimit
+* [@maciej](https://github.com/maciej)
+  * ensure `node["redis"]["dir"]` exists
 
 
 ## Contributing

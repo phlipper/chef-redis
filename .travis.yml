@@ -5,6 +5,4 @@ gemfile:
 rvm:
   - 1.9.3
   - 2.0.0
-script:
-  - bundle exec rake knife
-  - bundle exec rake foodcritic
+script: "bundle exec rake"

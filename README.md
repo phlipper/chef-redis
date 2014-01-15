@@ -13,6 +13,7 @@ Redis is an open source, advanced key-value store. It is often referred to as a 
 
 The following platforms are supported by this cookbook, meaning that the recipes run on these platforms without error:
 
+* Debian
 * Ubuntu
 
 
@@ -125,10 +126,9 @@ This cookbook could have way more personality... Help make it so!
 
 **chef-redis**
 
-* Freely distributable and licensed under the [MIT license](http://phlipper.mit-license.org/2012-2013/license.html).
-* Copyright (c) 2012-2013 Phil Cohen (github@phlippers.net) [![endorse](http://api.coderwall.com/phlipper/endorsecount.png)](http://coderwall.com/phlipper)
+* Freely distributable and licensed under the [MIT license](http://phlipper.mit-license.org/2012-2014/license.html).
+* Copyright (c) 2012-2014 Phil Cohen (github@phlippers.net) [![endorse](http://api.coderwall.com/phlipper/endorsecount.png)](http://coderwall.com/phlipper)  [![Gittip](http://img.shields.io/gittip/phlipper.png)](https://www.gittip.com/phlipper/)
 * http://phlippers.net/
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/phlipper/chef-redis/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-

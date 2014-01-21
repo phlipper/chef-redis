@@ -109,7 +109,8 @@ Many thanks go to the following [contributors](https://github.com/phlipper/chef-
   * add attribute to set ulimit
 * [@maciej](https://github.com/maciej)
   * ensure `node["redis"]["dir"]` exists
-
+* [@dwradcliffe](https://github.com/dwradcliffe)
+  * allow bind to all interfaces
 
 ## Contributing
 

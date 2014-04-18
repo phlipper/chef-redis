@@ -5,7 +5,11 @@
 
 include_recipe "redis::default"
 
-package "redis-server"
+default_action = node['redis']['auto_upgrade'] ? :upgrade : :install
+
+package "redis-server" do
+  action default_action
+end
 
 directory node["redis"]["dir"] do
   owner "redis"

@@ -16,3 +16,5 @@ suites:
   - name: default
     run_list:
       - recipe[redis::server]
+      - recipe[redis::client]
+      - recipe[minitest-handler]

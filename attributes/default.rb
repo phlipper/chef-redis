@@ -14,7 +14,7 @@ default["redis"]["databases"]                   = 16
 default["redis"]["snapshots"]                   = {
   900 => 1,
   300 => 10,
-  60  => 10000
+  60  => 10_000
 }
 default["redis"]["stop_writes_on_bgsave_error"] = "yes"
 default["redis"]["rdbcompression"]              = "yes"
@@ -41,7 +41,7 @@ default["redis"]["no_appendfsync_on_rewrite"]   = "no"
 default["redis"]["auto_aof_rewrite_percentage"] = 100
 default["redis"]["auto_aof_rewrite_min_size"]   = "64mb"
 default["redis"]["lua_time_limit"]              = 5000
-default["redis"]["slowlog_log_slower_than"]     = 10000
+default["redis"]["slowlog_log_slower_than"]     = 10_000
 default["redis"]["slowlog_max_len"]             = 1024
 default["redis"]["hash_max_ziplist_entries"]    = 512
 default["redis"]["hash_max_ziplist_value"]      = 64

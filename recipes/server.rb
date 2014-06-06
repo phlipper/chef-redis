@@ -14,7 +14,6 @@ directory node["redis"]["dir"] do
   recursive true
 end
 
-
 service "redis-server" do
   supports restart: true
   action [:enable, :start]

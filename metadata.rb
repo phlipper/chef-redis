@@ -7,7 +7,7 @@ version           "0.5.4"
 
 recipe "redis::default", "Sets up ppa apt repository"
 recipe "redis::server", "Installs redis server"
-recipe "redis::doc", "Installs redis documentation"
+recipe "redis::client", "Installs redis client"
 
 supports "debian"
 supports "ubuntu"

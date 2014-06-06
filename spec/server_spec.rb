@@ -7,7 +7,23 @@ describe "redis::server" do
 
   it { expect(chef_run).to include_recipe("redis::default") }
 
-  it { expect(chef_run).to install_package("redis-server") }
+  describe "package installation" do
+    describe "default action" do
+      it { expect(chef_run).to install_package("redis-server") }
+      it { expect(chef_run).to_not upgrade_package("redis-server") }
+    end
+
+    describe "when `auto_upgrade` is `true`" do
+      let(:chef_run) do
+        ChefSpec::Runner.new do |node|
+          node.set["redis"]["auto_upgrade"] = true
+        end.converge(described_recipe)
+      end
+
+      it { expect(chef_run).to_not install_package("redis-server") }
+      it { expect(chef_run).to upgrade_package("redis-server") }
+    end
+  end
 
   it "creates the data directory" do
     expect(chef_run).to create_directory("/var/lib/redis").with(

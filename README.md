@@ -1,4 +1,4 @@
-# chef-redis [![Build Status](https://travis-ci.org/phlipper/chef-redis.png?branch=master)](https://travis-ci.org/phlipper/chef-redis)
+# chef-redis [![Build Status](https://travis-ci.org/phlipper/chef-redis.svg?branch=master)](https://travis-ci.org/phlipper/chef-redis)
 
 ## Description
 
@@ -104,13 +104,13 @@ default["redis"]["auto_upgrade"]                = false
 
 Many thanks go to the following [contributors](https://github.com/phlipper/chef-redis/graphs/contributors) who have helped to make this cookbook even better:
 
-* [@smoil](https://github.com/smoil)
+* **[@smoil](https://github.com/smoil)**
   * `redis.conf` updates for Redis 2.6
-* [@svend](https://github.com/svend)
+* **[@svend](https://github.com/svend)**
   * add attribute to set ulimit
-* [@maciej](https://github.com/maciej)
+* **[@maciej](https://github.com/maciej)**
   * ensure `node["redis"]["dir"]` exists
-* [@dwradcliffe](https://github.com/dwradcliffe)
+* **[@dwradcliffe](https://github.com/dwradcliffe)**
   * allow bind to all interfaces
 
 ## Contributing
@@ -131,6 +131,3 @@ This cookbook could have way more personality... Help make it so!
 * Freely distributable and licensed under the [MIT license](http://phlipper.mit-license.org/2012-2014/license.html).
 * Copyright (c) 2012-2014 Phil Cohen (github@phlippers.net) [![endorse](http://api.coderwall.com/phlipper/endorsecount.png)](http://coderwall.com/phlipper)  [![Gittip](http://img.shields.io/gittip/phlipper.png)](https://www.gittip.com/phlipper/)
 * http://phlippers.net/
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/phlipper/chef-redis/trend.png)](https://bitdeli.com/free "Bitdeli Badge")

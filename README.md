@@ -91,6 +91,7 @@ default["redis"]["client_output_buffer_limit"]  = {
 }
 default["redis"]["include_config_files"]        = []
 default["redis"]["ulimit"]                      = ""
+default["redis"]["auto_upgrade"]                = false
 ```
 
 

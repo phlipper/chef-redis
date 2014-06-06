@@ -13,8 +13,13 @@ Redis is an open source, advanced key-value store. It is often referred to as a 
 
 The following platforms are supported by this cookbook, meaning that the recipes run on these platforms without error:
 
-* Debian
-* Ubuntu
+* Ubuntu 12.04+
+* Debian 6+
+
+### Cookbooks
+
+* [apt](http://community.opscode.com/cookbooks/apt)
+* [minitest-handler](http://community.opscode.com/cookbooks/minitest-handler) _(suggested, not required)_
 
 
 ## Recipes

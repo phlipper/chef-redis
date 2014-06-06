@@ -21,7 +21,7 @@ The following platforms are supported by this cookbook, meaning that the recipes
 
 * `redis` - The default recipe. Setup apt with ppa details.
 * `redis::server` - Install the Redis server.
-* `redis::doc` - Install the Redis documentation.
+* `redis::client` - Install the Redis client.
 
 # Usage
 

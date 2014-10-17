@@ -2,21 +2,10 @@
 # Cookbook Name:: redis
 # Recipe:: default
 #
-
-case node["platform"]
-when "debian"
-  apt_repository "dotdeb" do
-    uri "http://packages.dotdeb.org"
-    distribution node["lsb"]["codename"]
-    components ["all"]
-    key "http://www.dotdeb.org/dotdeb.gpg"
-  end
-when "ubuntu"
-  apt_repository "chris-lea-redis-server" do
-    uri "http://ppa.launchpad.net/chris-lea/redis-server/ubuntu"
-    distribution node["lsb"]["codename"]
-    components ["main"]
-    keyserver "keyserver.ubuntu.com"
-    key "C7917B12"
-  end
+apt_repository node["redis"]["apt_repository"] do
+  uri node["redis"]["apt_uri"]
+  distribution node["redis"]["apt_distribution"]
+  components node["redis"]["apt_components"]
+  keyserver node["redis"]["apt_keyserver"]
+  key node["redis"]["apt_key"]
 end

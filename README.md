@@ -36,6 +36,21 @@ This cookbook installs the Redis components if not present, and pulls updates if
 ## Attributes
 
 ```ruby
+case node["platform"]
+when "debian"
+  default["redis"]["apt_distribution"]          = node["lsb"]["codename"]
+  default["redis"]["apt_repository"]            = "dotdeb"
+  default["redis"]["apt_uri"]                   = "http://packages.dotdeb.org"
+  default["redis"]["apt_components"]            = ["all"]
+  default["redis"]["apt_key"]                   = "http://www.dotdeb.org/dotdeb.gpg"
+when "ubuntu"
+  default["redis"]["apt_distribution"]          = node["lsb"]["codename"]
+  default["redis"]["apt_repository"]            = "chris-lea-redis-server"
+  default["redis"]["apt_uri"]                   = "http://ppa.launchpad.net/chris-lea/redis-server/ubuntu"
+  default["redis"]["apt_components"]            = ["main"]
+  default["redis"]["apt_keyserver"]             = "keyserver.ubuntu.com"
+  default["redis"]["apt_key"]                   = "C7917B12"
+end
 default["redis"]["pidfile"]                     = "/var/run/redis/redis-server.pid"
 default["redis"]["daemonize"]                   = "yes"
 default["redis"]["port"]                        = 6379

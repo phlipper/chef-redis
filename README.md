@@ -132,6 +132,8 @@ Many thanks go to the following [contributors](https://github.com/phlipper/chef-
   * ensure `node["redis"]["dir"]` exists
 * **[@dwradcliffe](https://github.com/dwradcliffe)**
   * allow bind to all interfaces
+* **[@duggan](https://github.com/duggan)**
+  * allow customizable apt sources
 
 ## Contributing
 

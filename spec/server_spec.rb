@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "redis::server" do
   let(:chef_run) do
-    ChefSpec::Runner.new.converge(described_recipe)
+    ChefSpec::SoloRunner.new.converge(described_recipe)
   end
 
   it { expect(chef_run).to include_recipe("redis::default") }
@@ -15,7 +15,7 @@ describe "redis::server" do
 
     describe "when `auto_upgrade` is `true`" do
       let(:chef_run) do
-        ChefSpec::Runner.new do |node|
+        ChefSpec::SoloRunner.new do |node|
           node.set["redis"]["auto_upgrade"] = true
         end.converge(described_recipe)
       end

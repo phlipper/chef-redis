@@ -17,4 +17,4 @@ suites:
     run_list:
       - recipe[redis::server]
       - recipe[redis::client]
-      - recipe[minitest-handler]
+      # - recipe[minitest-handler]

@@ -1,16 +1,19 @@
 language: ruby
-bundler_args: --without integration
+bundler_args: --jobs 3 --without integration
 rvm:
 - 1.9.3
 - 2.0.0
-- 2.1.2
+- 2.1.5
+before_script:
+- "gem install bundler-audit --no-rdoc --no-ri && bundle-audit update"
 script:
-- bundle exec rake knife
+- bundle-audit
 - bundle exec rake rubocop
 - bundle exec rake foodcritic
 - bundle exec rake chefspec
-- bundle exec rake kitchen
+- bundle exec rake kitchen:all
+- bundle exec license_finder --quiet
 env:
   matrix:
   - CHEF_VERSION: "10.30"
-  - CHEF_VERSION: "11.10"
+  - CHEF_VERSION: "11.16"
